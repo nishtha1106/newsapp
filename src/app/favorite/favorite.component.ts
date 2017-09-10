@@ -11,6 +11,7 @@ data: any[];
   constructor(private newsService: NewsService) { }
   @Input('news') news:any;
   ngOnInit() {
+  	this.favorite();
   }
 
 favorite() {
@@ -19,9 +20,7 @@ favorite() {
 		this.data=res
 
 	})
-
 }
-
 delete(data:any) {
 	this.newsService.delete(data)
 	.subscribe(res =>{

@@ -24,7 +24,7 @@ searchNewsMain( ){
       .map(res=>res.json());
     }
 
-    favorite() {
+    favorite() { 
       return this.http.get('http://localhost:3000/employee')
       .map(res=>res.json());
     }

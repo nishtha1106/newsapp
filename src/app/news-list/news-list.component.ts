@@ -17,21 +17,15 @@ add(detail:any) {
 	this.favourite={
 		"title": detail.title,
 		"description": detail.description,
+    "url":detail.url,
 		"urlToImage": detail.urlToImage
 	}
 	this.newsService.add(this.favourite).subscribe((data)=>{
-      
+
 	})
 }
 
 ngOnInit(){
 
 }
-/*searchNews(searchTerm){
-  			this.newsService.searchNews(searchTerm.value)
-  			.subscribe((news) => { 
-          this.news=news.articles;
-          console.log(this.news)
-    
-  	});*/
 }
