@@ -8,9 +8,10 @@ import { NewsService } from '../news.service';
 })
 export class NewsListComponent implements OnInit{
 
-favourite:any={};
+
   constructor(private newsService: NewsService ) { }
   @Input('news') news:any;
+favourite:any={};
 
 add(detail:any) {
   console.log(detail)

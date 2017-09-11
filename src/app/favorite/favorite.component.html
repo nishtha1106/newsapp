@@ -1,19 +1,39 @@
-
+<html>
 <div class="container">
-<!-- <button type="button" class="btn btn-info" (click)="favorite()">Favorite</button> -->
-    <div class="card-group">
-      <div class="card cardsize">
-        <div class="row">
-          <div class='col-md-4' *ngFor="let data of data">
-            <img class="card-img-top cardimg" src="{{data.urlToImage}}" alt="No image" height="250px" width="350px"/>
-            <div class="card-body">
-              <h4 class="card-title"> <a href="{{data.url}}" target="blank">{{data.title}}</a></h4>
-              <p class="card-text">{{data.description}}</p>
-              <a href="/favorite" class="btn btn-danger" (click)="delete(data)">Delete</a>
-            </div>
-            <div class="card-footer text-muted">{{data.publishedAt}}</div>
-          </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3 col-lg-4 mt-4" *ngFor="let news of data">
+      <div class="card card-inverse">
+        <img class="card-img-top" src="{{news.urlToImage}}" alt="No image">
+        <div class="card-block card-inverse">
+          <h4 class="card-title"> <a href="/favorite" target="blank">{{news.title}}</a></h4>
+          <div class="card-text">{{news.description}}</div>
+        </div>
+        <div class="card-footer">
+          <span class="float-left">{{news.publishedAt}}</span>
+          <a class="btn btn-danger float-right" href="/favorite" (click)="delete(news)">Delete</a>
         </div>
       </div>
     </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   </div>
+</div>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+</html>

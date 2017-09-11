@@ -1,0 +1,8 @@
+.container a:hover{
+background-color: lightgreen;
+color: black;
+}
+.dropdown:hover {
+	background-color: khaki;
+	color: blue;
+}

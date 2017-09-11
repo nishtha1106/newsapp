@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-news',
@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-
   constructor() { }
 
-  ngOnInit() {
-  }
+ngOnInit() {
+}
   news:any;
 
   onrec(s:any) {

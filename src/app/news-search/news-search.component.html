@@ -1,10 +1,9 @@
-  <!-- <app-news-search (onEmit)="onEmit($event)"></app-news-search>
- --><!-- <app-news-list [news]='news'></app-news-list> -->
+<!-- <app-news-search (onEmit)="onEmit($event)"></app-news-search>
+ -->
+<!-- <app-news-list [news]='news'></app-news-list> -->
 <div class="container">
-<select class="btn btn-secondary dropdown-toggle" name="search" #searchTerm>
-<option *ngFor="let news of post" #name [value]="news.id">{{news.name}}</option>
-</select>
-<a class="btn btn-primary btn-success"  (click)="searchNews(searchTerm)"> Go</a>
-<!-- <button class="btn btn-outline-success my-2 my-sm-0" (click)="searchNews(searchTerm)">Search</button> -->
-
+  <select class="btn btn-secondary dropdown-toggle dropdown" name="search" #searchTerm>
+    <option *ngFor="let news of post" #name [value]="news.id">{{news.name}}</option>
+  </select>
+  <a class="btn btn-primary btn-success" (click)="searchNews(searchTerm)"> Go</a>
 </div>

@@ -10,6 +10,7 @@ import { NewsSearchComponent } from './news-search/news-search.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { NewsService } from './news.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NewsService } from './news.service';
     NewsComponent,
     NewsSearchComponent,
     NewsListComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,9 +27,11 @@ import { NewsService } from './news.service';
     HttpModule,
     RouterModule.forRoot([ 
     { path: 'news', component: NewsComponent },  
+    { path: 'home',component: HomeComponent },
     { path: 'favorite',component: FavoriteComponent },
     { path: 'search',component: NewsComponent },
-    { path: 'list',component: NewsListComponent }
+    { path: 'list',component: NewsListComponent },
+    { path:'',redirectTo:'/home', pathMatch:'full'}
     ])
   ],
   providers: [NewsService],

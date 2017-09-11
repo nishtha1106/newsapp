@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html>
-<div class="container">
- <h1 class="jumbotron">News Nation</h1>
-  <nav class="navbar navbar-toggleable-md navbar-light bg-light sticky-top ">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  <button class="btn btn-primary btn-info" [routerLink]= "'/search'">Search</button>
-  <button class="btn btn-primary btn-info" [routerLink]= "'/favorite'">Favorite</button>
-  </nav>
-</div>
-</html>
+<div class="body">
+  <div class="container">
+    <div class="topnav sticky-top container  navbar-toggleable">
+      <!-- <a class="active" [routerLink]="'/home'">Latest News Updates</a> -->
+      <a [routerLink]="'/home'">Latest News Updates</a>
+      <a [routerLink]="'/search'">Search your News Site</a>
+      <a [routerLink]="'/favorite'">Favorite News</a>
+    </div>
+    <h1 class="head jumbotron"> NEWSWORLD</h1>
+    <!--     <button class="btn btn-primary btn-info" [routerLink]="'/home'">Latest News Updates</button>
+    <button class="btn btn-primary btn-info" [routerLink]="'/search'">Search your News Site</button>
+    <button class="btn btn-primary btn-info" [routerLink]="'/favorite'">Favorite News</button>
+     -->
+    <hr>
+    <router-outlet></router-outlet>
+  </div>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+  <footer>
+    <div class="container-fluid bg-primary py-3 sticky-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="row py-0">
+              <div class="col-sm-1 hidden-md-down">
+                
+              </div>
+              <div>
+                <p> <span class="header-font">&copy; Nishtha Goyal</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="d-inline-block">
+              <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998 
+">
+                <a href="https://www.facebook.com/"><i class="fa fa-2x fa-fw fa-facebook text-white"></i>
+       </a>
+              </div>
+              <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF 
+">
+                <a href="https://twitter.com/">
+              <i class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
+              </div>
+              <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5 
+">
+                <a href="https://www.linkedin.com/company/">
+              <i class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
+              </div>
+              <div class="bg-circle-outline d-inline-block" style="background-color:#d34836 
+">
+                <a href="https://www.google.com/">
+              <i class="fa fa-2x fa-fw fa-google text-white"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<router-outlet></router-outlet>
+
+
+  <!--/.footer-->
+</div>
+
+</html>
