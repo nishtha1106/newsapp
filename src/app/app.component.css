@@ -4,10 +4,11 @@ background-color: darkslategray;
 .container {
 	background-color: grey;
 }
-.jumbotron {
+.head {
   background-color: wheat;
 }
 body {margin:0;}
+
 
 .topnav {
   overflow: hidden;
@@ -26,7 +27,7 @@ body {margin:0;}
 
 .topnav a:hover {
   background-color: crimson;
-  color: black;
+  color: wheat;
 }
 .head {
     color: crimson;
@@ -34,6 +35,10 @@ body {margin:0;}
     font-size: 150px ;
     font-family: cursive;
     text-decoration: none;
+}
+
+.sticky-bottom {
+  margin-bottom: 2px;
 }
 
 .header-font {
