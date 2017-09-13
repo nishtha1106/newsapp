@@ -2,8 +2,10 @@
  -->
 <!-- <app-news-list [news]='news'></app-news-list> -->
 <div class="container">
-  <select class="btn btn-secondary dropdown-toggle dropdown" name="search" #searchTerm>
+  <select class="btn btn-secondary dropdown-toggle dropdown-toggle-split dropdown" name="search" #searchTerm>
     <option *ngFor="let news of post" #name [value]="news.id">{{news.name}}</option>
   </select>
   <a class="btn btn-primary btn-success" (click)="searchNews(searchTerm)"> Go</a>
+  <hr>
+  
 </div>

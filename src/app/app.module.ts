@@ -11,6 +11,7 @@ import { NewsListComponent } from './news-list/news-list.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { NewsService } from './news.service';
 import { HomeComponent } from './home/home.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     NewsSearchComponent,
     NewsListComponent,
     FavoriteComponent,
-    HomeComponent
+    HomeComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { HomeComponent } from './home/home.component';
     { path: 'favorite',component: FavoriteComponent },
     { path: 'search',component: NewsComponent },
     { path: 'list',component: NewsListComponent },
+    { path: 'registration',component: RegistrationComponent },
     { path:'',redirectTo:'/home', pathMatch:'full'}
     ])
   ],
